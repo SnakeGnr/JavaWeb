@@ -13,17 +13,40 @@
         <title>Cadastro</title>
     </head>
     <body>
-        <h1>Cadastro de Carro</h1>
-        
-        <form action="AdicionaCarro" method="post">
-            Marca: <input type="text" name="marca" /><br />
-            Modelo: <input type="text" name="modelo" /><br />
-            Ano: <input type="text" name="ano" /><br />
-           
-           Valor: <input type="text" name="valor" /><br />
+        <h2> Cadastro de Carros</h2>
+        <div class="MenuBotoes"> 
+            <a href='index.jsp'><input type="button" value="Home"></a>
+            <a href='cadastro.jsp'><input type="button" value="Cadastrar"></a>
+            <a href='consulta.jsp'><input type="button" value="Consultar"></a>
+            <a href='alterar.jsp'><input type="button" value="Alterar"></a>
+            <a href='remove.jsp'><input type="button" value="Remover"></a>
 
-            <input type="submit" value="Gravar" />
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <form action="AdicionaCarro" method="post">
+            <table>
+                <tr>   
+                    <td> Marca:</td> <td>  <input type="text" name="marca" /></td>
+                </tr>
+                <tr> 
+                    <td> Modelo:</td> <td> <input type="text" name="modelo" /></td>
+                </tr>
+                <tr>
+                    <td> Ano: </td> <td><input type="text" name="ano" /></td>
+                </tr>
+                <tr> 
+                    <td> Valor: </td> <td> <input type="text" name="valor" /></td>
+                </tr>
+            </table>
+            <br>
+
+            <span> <input type="submit" value="Gravar" style="background-color: green" /> </span>
+            <a href="index.jsp"> <input type="button" value="Cancelar" style="background-color: red" /> </a>
+
         </form>
-        
+
     </body>
 </html>

@@ -15,21 +15,42 @@
         <title>Consulta de Carros</title>
     </head>
     <body>
-        <h1>Carros Cadastrados: </h1>
-        
-        <% CarroDao dao = new CarroDao(); 
-        List<Carro> car = dao.consulta();
-        
-        for(Carro c: car){
+        <h3>Carros Cadastrados: </h3>
+        <div class="MenuBotoes"> 
+            <a href='index.jsp'><input type="button" value="Home"></a>
+            <a href='cadastro.jsp'><input type="button" value="Cadastrar"></a>
+            <a href='consulta.jsp'><input type="button" value="Consultar"></a>
+            <a href='alterar.jsp'><input type="button" value="Alterar"></a>
+            <a href='remove.jsp'><input type="button" value="Remover"></a>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <table border='1'>
+            <tr> 
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Valor</th>
+
+            </tr>
+            <% CarroDao dao = new CarroDao();
+                List<Carro> car = dao.consulta();
+
+                for (Carro c : car) {
             %>
-            <li><%=c.getId()%>|
-            <%=c.getMarca()%>|
-            <%=c.getModelo()%>|
-            <%=c.getAno()%>|
-            <%=c.getValor()%>|</li>
-        <%
-            }
-        %>     
-            
+            <tr>
+                <td><%=c.getId()%></td>
+                <td><%=c.getMarca()%></td>
+                <td><%=c.getModelo()%></td>
+                <td><%=c.getAno()%></td>    
+                <td><%=c.getValor()%></td>
+            </tr>  
+            <% }%>     
+        </table>
+
+
     </body>
 </html>
