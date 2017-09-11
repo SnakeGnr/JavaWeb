@@ -21,11 +21,6 @@
             Ano: <input type="text" name="ano" /><br />
            
            Valor: <input type="text" name="valor" /><br />
-            
-
-            <div id="temtelefone"> Tem Telefone: <input type="checkbox"  name="temtelefone" />  />
-                <input type="text" id=""
-            </div >
 
             <input type="submit" value="Gravar" />
         </form>

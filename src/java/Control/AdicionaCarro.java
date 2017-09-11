@@ -91,11 +91,19 @@ public class AdicionaCarro extends HttpServlet {
         out.println("<body>");
         out.println("Carro  " + car.getModelo()
                 + " adicionado com sucesso");
+       out.print("<br>");
+       out.print("<br>");
+       out.print("<a href='index.jsp'><span>Index</span></a>");
+       out.print("<br>");
+       out.print("<a href='cadastro.jsp'><span>Cadastrar um novo carro</span></a>");
+       
         out.println("</body>");
         out.println("</html>");
-
-        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-        rd.forward(request, response);
+        out.print("");
+        
+       // RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+        
+       // rd.forward(request, response);
     }
 
     /**

@@ -23,24 +23,6 @@
         <a href='alterar.jsp'><span>Alterar Carro</span></a>
         <br>
         <br>        
-        <a href=''><span>Cadastrar Cliente</span></a>
-        <br>
-        <a href=''><span>Consultar Cliente </span></a>
-        <br>
-        <a href=''><span>Remover Cliente</span></a>
-        <br>
-        <a href=''><span>Alterar Cliente</span></a>
-        
-        <br>
-        <br>
-          <a href=''><span>Cadastrar Venda</span></a>
-        <br>
-        <a href=''><span>Consultar Venda</span></a>
-        <br>
-        <a href=''><span>Remover Venda</span></a>
-        <br>
-        <a href=''><span>Alterar Venda</span></a>
-        <br>
         
         
         <br>

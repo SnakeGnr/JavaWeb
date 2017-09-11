@@ -15,10 +15,10 @@ import java.sql.SQLException;
  * @author SnakeGnr
  */
 public class ConexaoBD {
-private String caminho = "jdbc:postgresql://localhost:5432/Adao";
+    private String caminho = "jdbc:postgresql://localhost:5432/senai";
     private String driver = "org.postgresql.Driver";
     private String usuario = "postgres";
-    private String senha = "aluno";
+    private String senha = "professor";
     
     public Connection getConnection () throws ClassNotFoundException{
         try {
