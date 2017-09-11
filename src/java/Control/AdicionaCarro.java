@@ -54,21 +54,14 @@ public class AdicionaCarro extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   //AO UTILIZAR O METODO POST AS INFO NÃO APARECEM NA URL!!!
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
         PrintWriter out = response.getWriter();
 
-        //Busca o que foi digitado na JSP através do request.getParameter()
+        //Busca o que foi digitado no form da JSP através do request.getParameter()
         String Marca = request.getParameter("marca");
         String Modelo = request.getParameter("modelo");
         String ano = request.getParameter("ano");
@@ -78,6 +71,7 @@ public class AdicionaCarro extends HttpServlet {
         Carro car = new Carro();
         car.setMarca(Marca);
         car.setModelo(Modelo);
+        //Lembrando que todo input text retorna uma String
         car.setAno(Integer.valueOf(ano));
         car.setValor(Double.valueOf(valor));
 
@@ -88,6 +82,8 @@ public class AdicionaCarro extends HttpServlet {
         } catch (ClassNotFoundException ex) {
             throw new RuntimeException(ex);
         }
+        
+        //Escreve uma pagina Html para tratamento
         out.println("<html>");
         out.println("<body>");
         out.println("Carro  " + car.getModelo()
@@ -102,6 +98,7 @@ public class AdicionaCarro extends HttpServlet {
         out.println("</html>");
         out.print("");
         
+       //redirecionamento automatico 
        // RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
         
        // rd.forward(request, response);

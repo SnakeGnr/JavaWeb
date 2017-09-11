@@ -9,6 +9,7 @@ import Model.Carro;
 import Model.CarroDao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -66,8 +67,18 @@ public class AlterarCarro extends HttpServlet {
         processRequest(request, response);
         
         String id = request.getParameter("id");
+        String Marca = request.getParameter("marca");
+        String Modelo = request.getParameter("modelo");
+        String ano = request.getParameter("ano");
+        String valor = request.getParameter("valor");
+        
+        
         Carro car = new Carro();
         car.setId(Integer.valueOf(id));
+        car.setMarca(Marca);
+        car.setModelo(Modelo);
+        car.setAno(Integer.valueOf(ano));
+        car.setValor(Double.valueOf(valor));
 
         try {
             CarroDao dao = new CarroDao();
@@ -75,6 +86,10 @@ public class AlterarCarro extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        
+          RequestDispatcher rd = request.getRequestDispatcher("/consulta.jsp");
+        
+       rd.forward(request, response);
     }
 
     /**

@@ -34,6 +34,8 @@
                 <th>Modelo</th>
                 <th>Ano</th>
                 <th>Valor</th>
+                <th>Editar</th>
+                <th>Excluir</th>
 
             </tr>
             <% CarroDao dao = new CarroDao();
@@ -47,6 +49,8 @@
                 <td><%=c.getModelo()%></td>
                 <td><%=c.getAno()%></td>    
                 <td><%=c.getValor()%></td>
+                <td><input type="button" value="Editar"> </td>
+                <td><input type="button" value="Excluir"> </td>
             </tr>  
             <% }%>     
         </table>

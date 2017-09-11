@@ -24,8 +24,10 @@
         </div>
         <br>
         <br>
-        <br>
-
+      
+        
+        <!- O form indica uma "action"  e um "method" apontando sempre para a servlet
+        responsavel por utilizar os dados que estão nos inputs do form->
         <form action="AdicionaCarro" method="post">
             <table>
                 <tr>   
@@ -45,7 +47,7 @@
 
             <span> <input type="submit" value="Gravar" style="background-color: green" /> </span>
             <a href="index.jsp"> <input type="button" value="Cancelar" style="background-color: red" /> </a>
-
+            <!-Todo form precisa de um submit!!! pois é ele que envia as info ->
         </form>
 
     </body>
